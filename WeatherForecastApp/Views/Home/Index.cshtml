@@ -1,0 +1,36 @@
+﻿@model WeatherForecastApp.Models.OpenWeatherResponseModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">City Forecast</h1>
+     <form asp-action="Index" asp-controller = "HomeController"> 
+        <div asp-validation-summary = "ModelOnly"  class = "text-danger"></div>
+            
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="success">
+                        <td colspan="2">
+                            Check Weather Situation
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Enter City</td>
+
+                        <td>
+                            <input asp-for="name" class = "form-control" placeholder="EnterCity" />
+
+                            <button asp-action = "GetCity" asp-route-id = "@Model.name" id = "btnFind" type ="submit" class = "btn btn-primary">&gt;&gt; Find</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+              </div>
+        </form>
+</</div>

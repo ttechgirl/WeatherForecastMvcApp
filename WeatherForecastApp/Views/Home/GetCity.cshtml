@@ -1,0 +1,68 @@
+﻿@model WeatherForecastApp.Models.OpenWeatherResponseModel
+
+@{
+    ViewData["Title"] = "GetCity";
+}
+
+<h1>GetCity</h1>
+
+<div>
+    <h4>OpenWeatherResponseModel</h4>
+    <hr />
+    @*displays the models with the response in a table form  *@
+    <table class = "table table-striped table-bordered">
+
+        <tr> 
+            <th>@Html.DisplayNameFor(model => model.coord) </th>
+            <td>@Html.DisplayFor(model => model.coord)</td>
+        </tr>
+         <tr> 
+            <th>@Html.DisplayNameFor(model => model.weather) </th>
+            <td>@Html.DisplayFor(model => model.weather)</td>
+        </tr>
+          <tr> 
+            <th>@Html.DisplayNameFor(model => model.Base) </th>
+            <td>@Html.DisplayFor(model => model.Base)</td>
+        </tr>
+         <tr> 
+            <th>@Html.DisplayNameFor(model => model.wind) </th>
+            <td>@Html.DisplayFor(model => model.wind)</td>
+        </tr>
+         <tr> 
+            <th>@Html.DisplayNameFor(model => model.clouds) </th>
+            <td>@Html.DisplayFor(model => model.clouds)</td>
+        </tr>
+         <tr> 
+            <th>@Html.DisplayNameFor(model => model.visibility) </th>
+            <td>@Html.DisplayFor(model => model.visibility)</td>
+        </tr>
+          <tr> 
+            <th>@Html.DisplayNameFor(model => model.dt) </th>
+            <td>@Html.DisplayFor(model => model.dt)</td>
+        </tr>
+          <tr> 
+            <th>@Html.DisplayNameFor(model => model.sys) </th>
+            <td>@Html.DisplayFor(model => model.sys)</td>
+        </tr>
+         <tr> 
+            <th>@Html.DisplayNameFor(model => model.id) </th>
+            <td>@Html.DisplayFor(model => model.id)</td>
+        </tr>
+         <tr> 
+            <th>@Html.DisplayNameFor(model => model.name) </th>
+            <td>@Html.DisplayFor(model => model.name)</td>
+        </tr>
+         <tr> 
+            <th>@Html.DisplayNameFor(model => model.timezone) </th>
+            <td>@Html.DisplayFor(model => model.timezone)</td>
+        </tr>
+         <tr> 
+            <th>@Html.DisplayNameFor(model => model.cod) </th>
+            <td>@Html.DisplayFor(model => model.cod)</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <a asp-action="Edit" class = "btn btn-primary"> &lt;&lt; Edit</a>
+    <a asp-action="Index" class = "btn btn-primary"> &lt;&lt; Previous Page</a>
+</div>
