@@ -11,6 +11,7 @@ namespace WeatherForecastApp.Services
         {
             this.configuration = configuration;
         }
+
         public async Task<OpenWeatherResponseModel> GetCity(string name)
         {
             //returns an empty response when nothing is passed to the parameter {name} 
@@ -20,7 +21,6 @@ namespace WeatherForecastApp.Services
             }
 
             var key = configuration.GetValue<string>("OpenWeather:SecretKey");
-
             var uri = $"{configuration.GetValue<string>("OpenWeather:url")}/weather?q={name}&appid={key}";
 
 
